@@ -7,39 +7,62 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         body {
-            font-size: 1.2em; /* Slightly increase the base font size */
+            font-size: 1.2em; /* Slightly increase base font size */
         }
 
         .services {
-            padding: 20px 50px; /* Add more padding to move content further from edges */
+            padding: 20px 50px;
+        }
+
+        .services h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
         }
 
         .pricing-card {
-            font-size: 1.3em; /* Further increase font size for pricing details */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
         }
 
-        .pricing-card h3 {
-            font-size: 1.6em; /* Larger font for plan titles */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
         }
 
-        .pricing-card .price {
-            font-size: 1.5em; /* Highlight pricing prominently */
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
         }
 
-        .contact-us {
-            padding: 20px 50px; /* Add padding to move Contact section off the left edge */
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
 
-        .contact-us h2 {
-            font-size: 2em; /* Increase font size for the Contact Us title */
+        form button {
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
         }
 
-        .contact-us p {
-            font-size: 1.2em; /* Larger font size for text */
-        }
-
-        .contact-us form label {
-            font-size: 1.1em; /* Larger labels for better readability */
+        form button:hover {
+            background-color: #003060;
         }
     </style>
 </head>
@@ -63,67 +86,41 @@
             <h2>Our Services</h2>
             <p>Choose the plan that suits your needs and get actionable cryptocurrency insights:</p>
 
-            <div class="pricing-table">
-                <!-- Plan 1: Express Plan -->
-                <div class="pricing-card">
-                    <h3>Express Plan</h3>
-                    <p class="price">$25/report</p>
-                    <ul>
-                        <li>Delivered within 24 hours</li>
-                        <li>Comprehensive technical analysis</li>
-                        <li>Market snapshot and trends</li>
-                        <li>Designed for quick decisions</li>
-                    </ul>
-                    <a href="contact.html" class="cta-button">Order Now</a>
-                </div>
-
-                <!-- Plan 2: Basic Plan -->
-                <div class="pricing-card">
-                    <h3>Basic Plan</h3>
-                    <p class="price">$50/month</p>
-                    <ul>
-                        <li>1 report per week</li>
-                        <li>Technical analysis</li>
-                        <li>Market trends overview</li>
-                        <li>Placeholder feature 1</li>
-                    </ul>
-                    <a href="contact.html" class="cta-button">Subscribe Now</a>
-                </div>
-
-                <!-- Plan 3: Pro Plan -->
-                <div class="pricing-card">
-                    <h3>Pro Plan</h3>
-                    <p class="price">$100/month</p>
-                    <ul>
-                        <li>2 reports per week</li>
-                        <li>In-depth analysis</li>
-                        <li>Custom insights</li>
-                        <li>Placeholder feature 2</li>
-                    </ul>
-                    <a href="contact.html" class="cta-button">Subscribe Now</a>
-                </div>
-
-                <!-- Plan 4: Premium Plan -->
-                <div class="pricing-card">
-                    <h3>Premium Plan</h3>
-                    <p class="price">$200/month</p>
-                    <ul>
-                        <li>Custom reports tailored to your portfolio</li>
-                        <li>Daily updates</li>
-                        <li>Exclusive market insights</li>
-                        <li>Placeholder feature 3</li>
-                    </ul>
-                    <a href="contact.html" class="cta-button">Subscribe Now</a>
-                </div>
+            <div class="pricing-card">
+                <h3>Basic Plan</h3>
+                <p>$50/month</p>
+                <p>Includes:</p>
+                <ul>
+                    <li>1 report per week</li>
+                    <li>Technical analysis</li>
+                    <li>Market trends overview</li>
+                </ul>
             </div>
-        </section>
 
-        <!-- Contact Form -->
-        <section class="contact-us">
-            <h2>Contact Us</h2>
-            <p>We welcome your questions and inquiries. Please fill out the form below to get in touch:</p>
+            <div class="pricing-card">
+                <h3>Pro Plan</h3>
+                <p>$100/month</p>
+                <p>Includes:</p>
+                <ul>
+                    <li>2 reports per week</li>
+                    <li>In-depth analysis</li>
+                    <li>Custom insights</li>
+                </ul>
+            </div>
 
-            <form action="https://formspree.io/f/xrbbdwla" method="POST">
+            <div class="pricing-card">
+                <h3>Premium Plan</h3>
+                <p>$200/month</p>
+                <p>Includes:</p>
+                <ul>
+                    <li>Custom reports tailored to your portfolio</li>
+                    <li>Daily updates</li>
+                    <li>Exclusive market insights</li>
+                </ul>
+            </div>
+
+            <!-- Subscription Form -->
+            <form action="https://formspree.io/f/xdkkjqlz" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your name" required>
 
@@ -131,9 +128,9 @@
                 <input type="email" id="email" name="email" placeholder="Your email" required>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Your message or plan details" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <button type="submit">Subscribe Now</button>
             </form>
         </section>
     </main>
