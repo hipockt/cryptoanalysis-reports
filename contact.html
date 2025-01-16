@@ -1,8 +1,19 @@
 <section class="contact-us">
     <h2>Contact Us</h2>
-    <p>We welcome your questions and inquiries. Feel free to reach out to us via email:</p>
+    <p>We welcome your questions and inquiries. Please fill out the form below to get in touch:</p>
 
-    <p><strong>Email:</strong> <a href="mailto:cryptoanalysis.reports@gmail.com">cryptoanalysis.reports@gmail.com</a></p>
+    <form action="mailto:cryptoanalysis.reports@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
 
     <h3>Other Ways to Reach Us</h3>
     <ul>
@@ -10,3 +21,4 @@
         <li>Follow us on <a href="#">Twitter</a> or <a href="#">LinkedIn</a></li>
     </ul>
 </section>
+
