@@ -85,5 +85,14 @@ footer {
 .contact-us a:visited {
     color: #003060;
 }
+footer p a {
+    color: yellow; /* Set email color to yellow */
+    font-weight: bold; /* Make it stand out more */
+    text-decoration: none; /* Remove underline */
+}
+
+footer p a:hover {
+    color: orange; /* Slight color change on hover for better interactivity */
+}
 
 
