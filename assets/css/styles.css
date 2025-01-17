@@ -114,6 +114,43 @@ footer p a:hover {
     border: 1px solid #ccc;
     border-radius: 8px;
 }
+.premium-inquiry {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.premium-inquiry h3 {
+    font-size: 2em;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.premium-inquiry p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.premium-inquiry .cta-button {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.premium-inquiry .cta-button:hover {
+    background-color: #003060;
+    color: white;
+}
 
 
 
