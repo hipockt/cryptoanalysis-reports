@@ -210,6 +210,14 @@ body {
     line-height: 1.6; /* Maintain good readability */
     color: #333; /* Ensure text color is consistent */
 }
+.chart-image {
+    max-width: 100%; /* Ensure it fits within the container */
+    height: auto;    /* Maintain aspect ratio */
+    max-height: 500px; /* Optional: Cap the height for balance */
+    margin: 20px 0;  /* Add spacing around the image */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    border-radius: 8px;     /* Optional: Slightly round the corners */
+}
 
 
 
