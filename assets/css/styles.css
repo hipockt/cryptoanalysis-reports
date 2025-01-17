@@ -204,6 +204,12 @@ footer p a:hover {
 .pricing .cta-button:hover {
     background-color: #003060;
 }
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em; /* This should match your other pages */
+    line-height: 1.6; /* Maintain good readability */
+    color: #333; /* Ensure text color is consistent */
+}
 
 
 
