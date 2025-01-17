@@ -5,97 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - CryptoAnalysis Reports</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <style>
-        body {
-            font-size: 1.2em;
-            margin: 0;
-            padding: 0;
-        }
-
-        .services {
-            max-width: 900px; /* Limit content width */
-            margin: 0 auto; /* Center content horizontally */
-            padding: 20px; /* Add spacing around the content */
-        }
-
-        .services h2 {
-            font-size: 2.2em;
-            margin-bottom: 20px;
-            text-align: center; /* Center align the heading */
-        }
-    
-
-        .pricing-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .pricing-card h3 {
-            font-size: 1.6em;
-            margin-bottom: 10px;
-        }
-
-        .pricing-card p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-
-        .pricing-card ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .pricing-card ul li {
-            margin: 8px 0;
-        }
-
-        form {
-            max-width: 600px; /* Limit form width */
-            margin: 40px auto; /* Center form on the page */
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        form label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        form input,
-        form select,
-        form textarea {
-            width: 100%; /* Full width input fields */
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        form button {
-            display: block;
-            width: 100%;
-            background-color: #004080;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.2em;
-        }
-
-        form button:hover {
-            background-color: #003060;
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -114,80 +23,36 @@
 
     <!-- Main Content -->
     <main>
-        <section class="services">
-            <h2>Our Services</h2>
-            <p>Choose the plan that suits your needs and get actionable cryptocurrency insights:</p>
-
-            <!-- Pricing Cards -->
-            <div class="pricing-card">
+        <section class="pricing">
+            <h2>Our Plans</h2>
+            
+            <div class="plan">
                 <h3>Express Plan</h3>
-                <p>$25/report</p>
+                <p>$25 per report</p>
                 <ul>
-                    <li>Single report delivered within 24 hours</li>
-                    <li>Quick technical analysis</li>
-                    <li>Focused on immediate insights</li>
+                    <li>Delivered within 1 hour</li>
+                    <li>Single cryptocurrency analysis</li>
+                    <li>Key indicators: price trends, support/resistance, RSI</li>
                 </ul>
+                <a href="contact.html" class="cta-button">Get Started</a>
             </div>
 
-            <div class="pricing-card">
+            <div class="plan">
                 <h3>Basic Plan</h3>
-                <p>$50/month</p>
+                <p>$50 per month</p>
                 <ul>
                     <li>1 report per week</li>
-                    <li>Technical analysis</li>
-                    <li>Market trends overview</li>
+                    <li>Comprehensive single coin analysis</li>
+                    <li>Basic technical indicators and market news</li>
                 </ul>
+                <a href="contact.html" class="cta-button">Subscribe Now</a>
             </div>
+        </section>
 
-            <div class="pricing-card">
-                <h3>Pro Plan</h3>
-                <p>$100/month</p>
-                <ul>
-                    <li>2 reports per week</li>
-                    <li>In-depth analysis</li>
-                    <li>Custom insights</li>
-                </ul>
-            </div>
-
-            <div class="pricing-card">
-                <h3>Premium Plan</h3>
-                <p>$200/month</p>
-                <ul>
-                    <li>Custom reports tailored to your portfolio</li>
-                    <li>Daily updates</li>
-                    <li>Exclusive market insights</li>
-                </ul>
-            </div>
-
-            <!-- Subscription Form -->
-            <form action="https://formspree.io/f/xdkkjqlz" method="POST">
-                <h3>Subscribe Now</h3>
-
-                <!-- Name Field -->
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
-
-                <!-- Email Field -->
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your email" required>
-
-                <!-- Plan Selection -->
-                <label for="plan">Select Plan:</label>
-                <select id="plan" name="plan" required>
-                    <option value="" disabled selected>Select a plan</option>
-                    <option value="Express">Express ($25/report)</option>
-                    <option value="Basic">Basic ($50/month)</option>
-                    <option value="Pro">Pro ($100/month)</option>
-                    <option value="Premium">Premium ($200/month)</option>
-                </select>
-
-                <!-- Message Field -->
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message or additional details" required></textarea>
-
-                <!-- Submit Button -->
-                <button type="submit">Send Message</button>
-            </form>
+        <section class="premium-inquiry">
+            <h3>Looking for Advanced Analysis?</h3>
+            <p>We’re planning to offer Pro and Premium plans soon, featuring advanced market analysis, multi-coin insights, and personalized recommendations. Let us know your interest!</p>
+            <a href="contact.html" class="cta-button">Inquire About Advanced Plans</a>
         </section>
     </main>
 
