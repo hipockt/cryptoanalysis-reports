@@ -231,7 +231,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: black;
+  color: yellow;
   text-decoration: none;
 }
 
@@ -270,7 +270,7 @@ nav ul li a {
   }
 
   nav ul li a {
-    color: white; /* Change text color for mobile menu */
+    color: yellow; /* Change text color for mobile menu */
   }
 }
 /* Default Menu for Desktop */
