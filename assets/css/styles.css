@@ -218,6 +218,61 @@ body {
     border: 1px solid #ddd; /* Optional: Add a border */
     border-radius: 8px;     /* Optional: Slightly round the corners */
 }
+/* Default Menu (Desktop View) */
+nav ul {
+  display: flex; /* Horizontal menu for larger screens */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Menu Icon (Hamburger) */
+.menu-icon {
+  display: none; /* Hidden on larger screens */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile Menu (Portrait and Small Screens) */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show hamburger icon */
+  }
+
+  nav ul {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    background: #333; /* Background color for mobile menu */
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+
+  nav ul.show {
+    display: flex; /* Show menu when toggled */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    color: white; /* Change text color for mobile menu */
+  }
+}
 
 
 
