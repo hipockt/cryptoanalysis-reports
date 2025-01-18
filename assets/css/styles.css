@@ -273,6 +273,39 @@ nav ul li a {
     color: white; /* Change text color for mobile menu */
   }
 }
+/* Default Menu for Desktop */
+nav ul {
+    display: flex; /* Ensure menu is visible in desktop view */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide menu by default on small screens */
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .menu-icon {
+        display: block; /* Show the hamburger icon on mobile */
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
 
 
 
