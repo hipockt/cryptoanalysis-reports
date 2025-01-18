@@ -61,6 +61,60 @@
             color: yellow; /* Make email address stand out */
             font-weight: bold;
         }
+
+        /* Added styles for responsive navigation menu */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            padding: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: #333;
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                width: 200px;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -68,7 +122,8 @@
     <header>
         <h1>CryptoAnalysis Reports</h1>
         <nav>
-            <ul>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -106,5 +161,13 @@
         <p>© 2025 CryptoAnalysis Reports. All Rights Reserved.</p>
         <p>Email: <a href="mailto:cryptoanalysis.reports@gmail.com">cryptoanalysis.reports@gmail.com</a></p>
     </footer>
+
+    <!-- JavaScript for menu toggle -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
