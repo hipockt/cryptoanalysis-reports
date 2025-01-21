@@ -128,6 +128,18 @@
 </script>
 
 
+<script>
+    function updateAmount(select) {
+        const amountField = document.getElementById("amount");
+        if (select.value === "Basic") {
+            amountField.value = "150.00";
+        } else {
+            amountField.value = "50.00";
+        }
+    }
+</script>
+
+
 
 
             <h3>Basic Plan</h3>
