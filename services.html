@@ -105,16 +105,28 @@
                 <input type="hidden" name="cmd" value="_xclick">
                 <input type="hidden" name="business" value="sb-dg0hv37096495@business.example.com">
                 <input type="hidden" name="currency_code" value="USD">
-                <input type="hidden" name="on0" value="Report Level"> <!-- Dropdown field label -->
+                <input type="hidden" name="on0" value="Report Level"> <!-- Dropdown label -->
                 <label for="os0">Choose Report Level:</label>
-            <select name="os0" id="os0">
+            <select name="os0" id="os0" onchange="updateAmount(this)">
         <option value="Express">Express - $50</option>
         <option value="Basic">Basic - $150</option>
     </select>
     <br><br>
-    <input type="hidden" name="amount" value="50.00">
-    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Pay Now">
+    <input type="hidden" name="amount" id="amount" value="50.00"> <!-- Default amount -->
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Buy Now">
 </form>
+
+<script>
+    function updateAmount(select) {
+        const amountField = document.getElementById("amount");
+        if (select.value === "Basic") {
+            amountField.value = "150.00";
+        } else {
+            amountField.value = "50.00";
+        }
+    }
+</script>
+
 
 
 
