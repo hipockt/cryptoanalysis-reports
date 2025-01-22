@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - CryptoAnalysis Reports</title>
+    <title>Payment Instructions - CryptoAnalysis Reports</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html" class="active">Request Payment</a></li>
             </ul>
         </nav>
     </header>
@@ -23,21 +23,27 @@
     <!-- Main Content -->
     <main>
         <section class="contact-us">
-            <h2>Contact Us</h2>
-            <p>Have questions or need expert guidance? Contact us using the form below, and our team will get back to you promptly.</p>
+            <h2>Request Payment Instructions</h2>
+            <p>To purchase a Crypto Analysis Report, please fill out the form below. We will send you detailed payment instructions promptly.</p>
 
-            <!-- Contact Form -->
-            <form action="https://formspree.io/f/xdkkjqlz" method="POST">
+            <!-- Payment Request Form -->
+            <form action="send_email_script.php" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your name" required>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Your email" required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                <label for="service">Service Requested:</label>
+                <select id="service" name="service" required>
+                    <option value="Express Report - $50">Express Report - $50</option>
+                    <option value="Basic Plan - $150">Basic Plan - $150</option>
+                </select>
 
-                <button type="submit">Send Message</button>
+                <label for="message">Additional Comments (Optional):</label>
+                <textarea id="message" name="message" rows="5" placeholder="Any special requests or questions"></textarea>
+
+                <button type="submit">Submit Request</button>
             </form>
         </section>
     </main>
