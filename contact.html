@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Instructions - CryptoAnalysis Reports</title>
+    <title>Request Payment - CryptoAnalysis Reports</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -28,21 +28,26 @@
 
             <!-- Payment Request Form -->
             <form action="send_email_script.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
+                <!-- Name Field -->
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Your full name" required><br><br>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your email" required>
+                <!-- Email Field -->
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Your email address" required><br><br>
 
-                <label for="service">Service Requested:</label>
+                <!-- Service Dropdown -->
+                <label for="service">Select a Service:</label><br>
                 <select id="service" name="service" required>
                     <option value="Express Report - $50">Express Report - $50</option>
                     <option value="Basic Plan - $150">Basic Plan - $150</option>
-                </select>
+                </select><br><br>
 
-                <label for="message">Additional Comments (Optional):</label>
-                <textarea id="message" name="message" rows="5" placeholder="Any special requests or questions"></textarea>
+                <!-- Additional Comments -->
+                <label for="message">Additional Comments (Optional):</label><br>
+                <textarea id="message" name="message" rows="5" placeholder="Any special requests or questions"></textarea><br><br>
 
+                <!-- Submit Button -->
                 <button type="submit">Submit Request</button>
             </form>
         </section>
