@@ -78,6 +78,21 @@
             width: 200px;
             margin: 10px 0;
         }
+
+        .crypto-ticker {
+            background-color: #004080;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .crypto-ticker span {
+            margin: 0 15px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -93,6 +108,11 @@
         </nav>
     </header>
 
+    <div class="crypto-ticker">
+        <span>BTC: <span id="btc-price">Loading...</span> USD</span>
+        <span>ETH: <span id="eth-price">Loading...</span> USD</span>
+    </div>
+
     <main>
         <section>
             <h2>Choose the Plan That Suits You Best</h2>
@@ -107,7 +127,7 @@
             </ul>
             <p><strong>Price:</strong> $50 per report</p>
             <p><strong>Payment Instructions:</strong> To purchase an Express Report, send an email to <a href="mailto:cryptoanalysis.reports@gmail.com">cryptoanalysis.reports@gmail.com</a> with the subject line "Express Report Payment" for payment details. Payment will be processed via <strong>PayPal</strong>.</p>
-            
+
             <h3>Basic Plan</h3>
             <p><strong>Perfect for ongoing insights:</strong> Includes two reports per week with detailed analysis and tailored observations.</p>
             <ul>
@@ -121,32 +141,31 @@
 
             <!-- Ethereum Payment Section -->
             <div class="crypto-payment">
-    <h3>Pay with Ethereum (ETH)</h3>
-    <p>To pay with Ethereum, scan the QR code or send your payment to the wallet address below:</p>
-    <p><strong>Wallet Address:</strong> 0xCC4b1D53BFBCf03Df31f4d74f631A845172aB275</p>
-    <img src="assets/images/ethereum-qr-code.png" alt="Ethereum QR Code" style="max-width: 200px;">
-    <p>After sending your payment, email us at <a href="mailto:cryptoanalysis.reports@gmail.com">cryptoanalysis.reports@gmail.com</a> with the transaction details, including:</p>
-    <ul>
-        <li>The transaction hash (TXID).</li>
-        <li>Your name and email address.</li>
-        <li>The service you purchased.</li>
-    </ul>
-</div>
+                <h3>Pay with Ethereum (ETH)</h3>
+                <p>To pay with Ethereum, scan the QR code or send your payment to the wallet address below:</p>
+                <p><strong>Wallet Address:</strong> 0xCC4b1D53BFBCf03Df31f4d74f631A845172aB275</p>
+                <img src="assets/images/ethereum-qr-code.png" alt="Ethereum QR Code">
+                <p>After sending your payment, email us at <a href="mailto:cryptoanalysis.reports@gmail.com">cryptoanalysis.reports@gmail.com</a> with the transaction details, including:</p>
+                <ul>
+                    <li>The transaction hash (TXID).</li>
+                    <li>Your name and email address.</li>
+                    <li>The service you purchased.</li>
+                </ul>
+            </div>
 
             <!-- Bitcoin Payment Section -->
-<div class="crypto-payment">
-    <h3>Pay with Bitcoin (BTC)</h3>
-    <p>To pay with Bitcoin, send your payment to the wallet address below:</p>
-    <p><strong>Wallet Address:</strong> 1MbQkboZj8M3g8TvHH56x22nYFjT6oDAuz</p>
-    <img src="assets/images/bitcoin-qr-code.png" alt="Bitcoin QR Code" style="max-width: 200px;">
-    <p>After sending your payment, email us at <a href="mailto:cryptoanalysis.reports@gmail.com">cryptoanalysis.reports@gmail.com</a> with the transaction details, including:</p>
-    <ul>
-        <li>The transaction hash (TXID).</li>
-        <li>Your name and email address.</li>
-        <li>The service you purchased.</li>
-    </ul>
-</div>
-
+            <div class="crypto-payment">
+                <h3>Pay with Bitcoin (BTC)</h3>
+                <p>To pay with Bitcoin, scan the QR code or send your payment to the wallet address below:</p>
+                <p><strong>Wallet Address:</strong> 1MbQkboZj8M3g8TvHH56x22nYFjT6oDAuz</p>
+                <img src="assets/images/bitcoin-qr-code.png" alt="Bitcoin QR Code">
+                <p>After sending your payment, email us at <a href="mailto:cryptoanalysis.reports@gmail.com">cryptoanalysis.reports@gmail.com</a> with the transaction details, including:</p>
+                <ul>
+                    <li>The transaction hash (TXID).</li>
+                    <li>Your name and email address.</li>
+                    <li>The service you purchased.</li>
+                </ul>
+            </div>
 
             <h2>Compare Our Plans</h2>
             <table>
@@ -190,7 +209,4 @@
 
     <footer>
         <p>© 2025 CryptoAnalysis Reports. All Rights Reserved.</p>
-        <p>Email: <a href="mailto:cryptoanalysis.reports@gmail.com">cryptoanalysis.reports@gmail.com</a></p>
-    </footer>
-</body>
-</html>
+        <p>Email: <a href="mailto:cryptoanalysis.reports@gmail.com">cryptoanalysis.reports@gmail.com</a></p
