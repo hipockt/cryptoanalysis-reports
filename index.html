@@ -16,34 +16,59 @@
             background-color: #004080;
             color: white;
             padding: 10px 20px;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
             text-align: center;
         }
 
-        .menu-container {
-            display: flex;
+        .hamburger {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            display: none;
             flex-direction: column;
-            align-items: center;
-            padding: 20px;
+            gap: 5px;
         }
 
-        .menu-container a {
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+        }
+
+        nav {
+            display: none;
+            position: fixed;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            color: #004080;
+            border: 1px solid #004080;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        nav ul li a {
             color: #004080;
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
-            margin: 10px 0;
-            text-align: center;
-            padding: 10px 20px;
-            border: 1px solid #004080;
-            border-radius: 5px;
-            width: 200px;
-            background-color: white;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .menu-container a:hover {
-            background-color: #004080;
-            color: white;
         }
 
         .mobile-tip {
@@ -54,11 +79,26 @@
             font-size: 14px;
         }
 
+        main {
+            text-align: center;
+            padding: 20px;
+        }
+
         footer {
             text-align: center;
             padding: 10px;
             background-color: #004080;
             color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav {
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -66,27 +106,48 @@
     <!-- Header -->
     <header>
         <h1>CryptoAnalysis Reports</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
 
     <!-- Mobile Tip -->
     <div class="mobile-tip">
-        Mobile Tip: Swipe left to right to access the menu on mobile devices.
+        Mobile Tip: Swipe left to right or tap the hamburger menu for navigation.
     </div>
 
-    <!-- Menu Items in Center Column -->
-    <div class="menu-container">
-        <a href="index.html" class="active">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="example.html">Example 1: Market Trends</a>
-        <a href="example2.html">Example 2: Support & Resistance</a>
-        <a href="example3.html">Example 3: RSI & MACD Analysis</a>
-    </div>
+    <!-- Menu -->
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="example.html">Example 1: Market Trends</a></li>
+            <li><a href="example2.html">Example 2: Support & Resistance</a></li>
+            <li><a href="example3.html">Example 3: RSI & MACD Analysis</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Welcome to CryptoAnalysis Reports</h2>
+        <p>Your trusted source for actionable cryptocurrency market insights. Choose a plan and get started today!</p>
+        <button onclick="window.location.href='services.html'">Explore Services</button>
+    </main>
 
     <!-- Footer -->
     <footer>
         <p>© 2025 CryptoAnalysis Reports. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
