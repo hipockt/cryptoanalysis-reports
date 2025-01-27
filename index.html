@@ -20,8 +20,7 @@
         }
 
         .hamburger {
-            display: none;
-            flex-direction: column;
+            display: block;
             cursor: pointer;
         }
 
@@ -34,13 +33,12 @@
 
         nav {
             display: none;
+            flex-direction: column;
+            background-color: #004080;
         }
 
         nav.active {
             display: flex;
-            flex-direction: column;
-            background-color: #004080;
-            padding: 10px 0;
         }
 
         nav a {
@@ -48,14 +46,6 @@
             text-decoration: none;
             padding: 10px;
             text-align: center;
-        }
-
-        .mobile-tip {
-            background-color: #f9f9f9;
-            color: #333;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
         }
 
         main {
@@ -95,16 +85,12 @@
             <div></div>
         </div>
         <nav>
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-
-    <div class="mobile-tip">
-        Mobile Tip: Tap the menu icon to navigate.
-    </div>
 
     <main>
         <section>
