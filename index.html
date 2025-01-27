@@ -22,21 +22,19 @@
         .menu-bar {
             background-color: #004080;
             display: flex;
-            flex-wrap: wrap; /* Allows items to wrap in landscape */
-            justify-content: center; /* Center items */
+            flex-wrap: wrap; /* Ensures items wrap to the next line */
+            justify-content: center; /* Center the menu */
             align-items: center;
             padding: 10px;
-            max-width: 100%; /* Prevents horizontal overflow */
-            overflow-x: auto; /* Scrolls horizontally if needed */
         }
 
         .menu-bar ul {
             list-style: none;
             display: flex;
-            gap: 10px; /* Reduced gap for smaller screens */
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+            gap: 10px;
             margin: 0;
             padding: 0;
-            flex-wrap: wrap; /* Ensures wrapping on smaller screens */
         }
 
         .menu-bar ul li {
@@ -47,10 +45,11 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
-            padding: 5px 10px; /* Reduced padding for compact layout */
+            padding: 10px 15px;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
-            font-size: 14px; /* Adjust font size for small screens */
+            font-size: 14px;
+            white-space: nowrap; /* Prevents text from breaking inside links */
         }
 
         .menu-bar ul li a:hover {
@@ -66,12 +65,13 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .menu-bar ul {
-                flex-direction: column; /* Stacks vertically */
+                flex-direction: column; /* Stacks menu items vertically */
                 align-items: center;
             }
 
             .menu-bar ul li a {
-                padding: 10px 15px; /* Increase padding for larger tap area */
+                width: 100%; /* Ensures links span the full width */
+                text-align: center; /* Center-align text */
             }
         }
     </style>
