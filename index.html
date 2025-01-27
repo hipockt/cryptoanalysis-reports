@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Bar Example</title>
+    <title>Responsive Menu Bar</title>
     <style>
         /* General Styles */
         body {
@@ -14,36 +14,43 @@
         header {
             background-color: #004080;
             color: white;
-            padding: 10px 20px;
+            text-align: center;
+            padding: 10px 0;
         }
 
         /* Menu Bar */
         .menu-bar {
-            display: flex;
-            justify-content: center; /* Center the menu */
-            align-items: center;
             background-color: #004080;
-            padding: 10px 0;
+            display: flex;
+            flex-wrap: wrap; /* Allows items to wrap in landscape */
+            justify-content: center; /* Center items */
+            align-items: center;
+            padding: 10px;
+            max-width: 100%; /* Prevents horizontal overflow */
+            overflow-x: auto; /* Scrolls horizontally if needed */
         }
 
         .menu-bar ul {
-            display: flex;
             list-style: none;
+            display: flex;
+            gap: 10px; /* Reduced gap for smaller screens */
             margin: 0;
             padding: 0;
+            flex-wrap: wrap; /* Ensures wrapping on smaller screens */
         }
 
         .menu-bar ul li {
-            margin: 0 15px;
+            margin: 0;
         }
 
         .menu-bar ul li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
-            padding: 5px 10px;
+            padding: 5px 10px; /* Reduced padding for compact layout */
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
+            font-size: 14px; /* Adjust font size for small screens */
         }
 
         .menu-bar ul li a:hover {
@@ -56,19 +63,15 @@
             color: #004080;
         }
 
-        /* Responsive Layout */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .menu-bar {
-                flex-direction: column;
-            }
-
             .menu-bar ul {
-                flex-direction: column;
+                flex-direction: column; /* Stacks vertically */
                 align-items: center;
             }
 
-            .menu-bar ul li {
-                margin: 10px 0;
+            .menu-bar ul li a {
+                padding: 10px 15px; /* Increase padding for larger tap area */
             }
         }
     </style>
