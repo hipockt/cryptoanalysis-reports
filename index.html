@@ -17,6 +17,14 @@
             color: white;
             padding: 10px 20px;
             text-align: center;
+            position: relative;
+        }
+
+        nav {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background-color: #004080;
         }
 
         nav ul {
@@ -27,8 +35,7 @@
         }
 
         nav ul li {
-            display: inline;
-            margin: 0 15px;
+            margin: 10px 0;
         }
 
         nav ul li a {
@@ -36,8 +43,40 @@
             text-decoration: none;
         }
 
-        nav ul li a.active {
-            text-decoration: underline;
+        .hamburger {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            cursor: pointer;
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger::after,
+        .hamburger::before {
+            content: '';
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin-top: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active {
+            transform: rotate(45deg);
+        }
+
+        .hamburger.active::before {
+            transform: rotate(90deg);
+            margin-top: -5px;
+        }
+
+        nav.active {
+            display: flex;
         }
 
         .mobile-tip {
@@ -74,12 +113,33 @@
             background-color: #004080;
             color: white;
         }
+
+        @media (min-width: 768px) {
+            nav {
+                display: flex;
+                justify-content: center;
+                position: static;
+            }
+
+            nav ul {
+                flex-direction: row;
+            }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+            .hamburger {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <h1>CryptoAnalysis Reports</h1>
+        <div class="hamburger" onclick="toggleMenu()"></div>
         <nav>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
@@ -109,5 +169,14 @@
     <footer>
         <p>© 2025 CryptoAnalysis Reports. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('nav');
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
