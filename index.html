@@ -22,8 +22,8 @@
         .menu-bar {
             background-color: #004080;
             display: flex;
-            flex-wrap: wrap; /* Ensures items wrap to the next line */
-            justify-content: center; /* Center the menu */
+            flex-direction: column; /* Allows rows */
+            justify-content: center;
             align-items: center;
             padding: 10px;
         }
@@ -31,7 +31,6 @@
         .menu-bar ul {
             list-style: none;
             display: flex;
-            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
             gap: 10px;
             margin: 0;
             padding: 0;
@@ -84,11 +83,15 @@
 
     <!-- Menu Bar -->
     <nav class="menu-bar">
+        <!-- First Row -->
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Second Row -->
+        <ul>
             <li><a href="example.html">Example 1</a></li>
             <li><a href="example2.html">Example 2</a></li>
             <li><a href="example3.html">Example 3</a></li>
