@@ -20,36 +20,13 @@
             position: relative;
         }
 
-        nav {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            background-color: #004080;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-
-        nav ul li {
-            margin: 10px 0;
-        }
-
-        nav ul li a {
-            color: yellow;
-            text-decoration: none;
-        }
-
         .hamburger {
             position: absolute;
             right: 20px;
             top: 15px;
             cursor: pointer;
             display: block;
-            width: 25px;
+            width: 30px;
             height: 3px;
             background-color: white;
             transition: all 0.3s ease;
@@ -59,24 +36,39 @@
         .hamburger::before {
             content: '';
             display: block;
-            width: 25px;
+            width: 30px;
             height: 3px;
             background-color: white;
             margin-top: 5px;
             transition: all 0.3s ease;
         }
 
-        .hamburger.active {
-            transform: rotate(45deg);
-        }
-
-        .hamburger.active::before {
-            transform: rotate(90deg);
-            margin-top: -5px;
+        nav {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background-color: #004080;
+            padding: 10px 0;
         }
 
         nav.active {
             display: flex;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        nav ul li a {
+            color: yellow;
+            text-decoration: none;
+            font-size: 18px;
         }
 
         .mobile-tip {
@@ -88,23 +80,8 @@
         }
 
         main {
-            padding: 20px 50px;
+            padding: 20px;
             text-align: center;
-        }
-
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #004080;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-
-        .cta-button:hover {
-            background-color: #002f60;
         }
 
         footer {
@@ -159,9 +136,7 @@
     <main>
         <section>
             <h2>Welcome to CryptoAnalysis Reports</h2>
-            <p>Your trusted source for actionable cryptocurrency market insights.</p>
-            <p>Choose a plan and get started today!</p>
-            <a href="services.html" class="cta-button">Explore Our Services</a>
+            <p>Your trusted source for actionable cryptocurrency market insights. Choose a plan and get started today!</p>
         </section>
     </main>
 
@@ -172,9 +147,7 @@
 
     <script>
         function toggleMenu() {
-            const hamburger = document.querySelector('.hamburger');
             const nav = document.querySelector('nav');
-            hamburger.classList.toggle('active');
             nav.classList.toggle('active');
         }
     </script>
