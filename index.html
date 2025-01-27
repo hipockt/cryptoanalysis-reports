@@ -42,14 +42,13 @@
 
         /* Navigation Menu */
         nav {
-            display: none; /* Hidden by default for mobile */
-            flex-direction: column;
-            background-color: white;
-            color: #004080;
+            display: none; /* Hidden by default */
             position: absolute;
             top: 60px;
             left: 50%;
             transform: translateX(-50%);
+            background-color: white;
+            color: #004080;
             border: 1px solid #004080;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -76,43 +75,30 @@
             text-align: center;
         }
 
-        /* Main Content */
-        main {
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #004080;
-            color: white;
-        }
-
         /* Desktop Styles */
         @media (min-width: 1025px) {
             .hamburger {
-                display: none; /* Hide hamburger on larger screens */
+                display: none; /* Hide hamburger menu on larger screens */
             }
 
             nav {
-                display: flex; /* Show menu on larger screens */
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
+                display: flex !important; /* Ensure visibility on larger screens */
                 position: static;
-                background-color: transparent;
+                background-color: #004080;
                 color: white;
+                padding: 10px 20px;
                 border: none;
                 box-shadow: none;
-                width: auto;
-                padding: 0;
+                flex-direction: row;
+                justify-content: center;
             }
 
             nav ul {
                 display: flex;
                 gap: 20px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
             }
 
             nav ul li {
