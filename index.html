@@ -3,125 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoAnalysis Reports</title>
+    <title>Menu Bar Example</title>
     <style>
         /* General Styles */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
         }
 
         header {
             background-color: #004080;
             color: white;
             padding: 10px 20px;
+        }
+
+        /* Menu Bar */
+        .menu-bar {
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Center the menu */
             align-items: center;
+            background-color: #004080;
+            padding: 10px 0;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
-
-        /* Hamburger Menu */
-        .hamburger {
+        .menu-bar ul {
             display: flex;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-        }
-
-        /* Navigation Menu */
-        nav {
-            display: none; /* Hidden by default */
-            position: absolute;
-            top: 60px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            color: #004080;
-            border: 1px solid #004080;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 90%;
-            max-width: 300px;
-            padding: 20px;
-            z-index: 10;
-        }
-
-        nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
         }
 
-        nav ul li {
-            margin: 10px 0;
+        .menu-bar ul li {
+            margin: 0 15px;
         }
 
-        nav ul li a {
-            color: #004080;
+        .menu-bar ul li a {
+            color: white;
             text-decoration: none;
             font-weight: bold;
-            text-align: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Desktop Styles */
-        @media (min-width: 1025px) {
-            .hamburger {
-                display: none; /* Hide hamburger menu on larger screens */
+        .menu-bar ul li a:hover {
+            background-color: white;
+            color: #004080;
+        }
+
+        .menu-bar ul li a.active {
+            background-color: white;
+            color: #004080;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .menu-bar {
+                flex-direction: column;
             }
 
-            nav {
-                display: flex !important; /* Ensure visibility on larger screens */
-                position: static;
-                background-color: #004080;
-                color: white;
-                padding: 10px 20px;
-                border: none;
-                box-shadow: none;
-                flex-direction: row;
-                justify-content: center;
+            .menu-bar ul {
+                flex-direction: column;
+                align-items: center;
             }
 
-            nav ul {
-                display: flex;
-                gap: 20px;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-
-            nav ul li {
-                margin: 0;
-            }
-
-            nav ul li a {
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-                padding: 10px 15px;
-                border-radius: 5px;
-                transition: background-color 0.3s, color 0.3s;
-            }
-
-            nav ul li a:hover {
-                background-color: white;
-                color: #004080;
-            }
-
-            nav ul li a.active {
-                background-color: white;
-                color: #004080;
+            .menu-bar ul li {
+                margin: 10px 0;
             }
         }
     </style>
@@ -130,60 +77,30 @@
     <!-- Header -->
     <header>
         <h1>CryptoAnalysis Reports</h1>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
     </header>
 
-    <!-- Navigation Menu -->
-    <nav id="menu">
+    <!-- Menu Bar -->
+    <nav class="menu-bar">
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="example.html">Example 1: Market Trends</a></li>
-            <li><a href="example2.html">Example 2: Support & Resistance</a></li>
-            <li><a href="example3.html">Example 3: RSI & MACD Analysis</a></li>
+            <li><a href="example.html">Example 1</a></li>
+            <li><a href="example2.html">Example 2</a></li>
+            <li><a href="example3.html">Example 3</a></li>
         </ul>
     </nav>
 
     <!-- Main Content -->
-    <main>
+    <main style="text-align: center; padding: 20px;">
         <h2>Welcome to CryptoAnalysis Reports</h2>
-        <p>Your trusted source for actionable cryptocurrency market insights. Choose a plan and get started today!</p>
-        <button onclick="window.location.href='services.html'">Explore Services</button>
+        <p>Your trusted source for actionable cryptocurrency market insights.</p>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer style="text-align: center; padding: 10px; background-color: #004080; color: white;">
         <p>© 2025 CryptoAnalysis Reports. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function (event) {
-            const menu = document.getElementById('menu');
-            const hamburger = document.querySelector('.hamburger');
-            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
-                menu.style.display = 'none';
-            }
-        });
-
-        // Close menu on link click
-        const menuLinks = document.querySelectorAll('nav ul li a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('menu').style.display = 'none';
-            });
-        });
-    </script>
 </body>
 </html>
