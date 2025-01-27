@@ -4,71 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CryptoAnalysis Reports</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
         }
 
         header {
             background-color: #004080;
             color: white;
             padding: 10px 20px;
-            text-align: center;
-            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .hamburger {
-            position: absolute;
-            right: 20px;
-            top: 15px;
+            display: none;
+            flex-direction: column;
             cursor: pointer;
-            display: block;
-            width: 30px;
-            height: 3px;
-            background-color: white;
-            transition: all 0.3s ease;
         }
 
-        .hamburger::after,
-        .hamburger::before {
-            content: '';
-            display: block;
-            width: 30px;
-            height: 3px;
+        .hamburger div {
             background-color: white;
-            margin-top: 5px;
-            transition: all 0.3s ease;
+            height: 3px;
+            width: 25px;
+            margin: 4px 0;
         }
 
         nav {
             display: none;
-            flex-direction: column;
-            align-items: center;
-            background-color: #004080;
-            padding: 10px 0;
         }
 
         nav.active {
             display: flex;
+            flex-direction: column;
+            background-color: #004080;
+            padding: 10px 0;
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin: 10px 0;
-        }
-
-        nav ul li a {
+        nav a {
             color: yellow;
             text-decoration: none;
-            font-size: 18px;
+            padding: 10px;
+            text-align: center;
         }
 
         .mobile-tip {
@@ -92,47 +71,41 @@
         }
 
         @media (min-width: 768px) {
-            nav {
-                display: flex;
-                justify-content: center;
-                position: static;
+            .hamburger {
+                display: none;
             }
 
-            nav ul {
+            nav {
+                display: flex;
                 flex-direction: row;
             }
 
-            nav ul li {
-                margin: 0 15px;
-            }
-
-            .hamburger {
-                display: none;
+            nav a {
+                padding: 0 15px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <h1>CryptoAnalysis Reports</h1>
-        <div class="hamburger" onclick="toggleMenu()"></div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <a href="index.html" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <!-- Mobile Tip -->
     <div class="mobile-tip">
-        Mobile Tip: Swipe left to right to access the menu on mobile devices.
+        Mobile Tip: Tap the menu icon to navigate.
     </div>
 
-    <!-- Main Content -->
     <main>
         <section>
             <h2>Welcome to CryptoAnalysis Reports</h2>
@@ -140,7 +113,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>© 2025 CryptoAnalysis Reports. All Rights Reserved.</p>
     </footer>
