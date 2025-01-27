@@ -3,116 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - CryptoAnalysis Reports</title>
+    <title>CryptoAnalysis Reports</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-        body {
-            font-size: 1.2em; /* Slightly increase the base font size */
-        }
-
-        .banner {
-            background: linear-gradient(135deg, #004080, #0074d9);
-            color: white;
-            padding: 50px 20px;
+        .mobile-tip {
             text-align: center;
-        }
-
-        .banner h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .banner p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        .banner .cta-button {
-            background-color: white;
+            margin: 10px 0;
+            font-size: 0.9em;
             color: #004080;
-            padding: 10px 20px;
-            font-size: 1.1em;
-            text-decoration: none;
+            background-color: #f0f8ff;
+            padding: 8px;
             border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .banner .cta-button:hover {
-            background-color: #004080;
-            color: white;
-        }
-
-        .home {
-            padding: 20px 50px; /* Add padding to match other pages */
-        }
-
-        .home h2 {
-            font-size: 2.2em; /* Larger font size for main title */
-            margin-bottom: 20px;
-        }
-
-        .home p {
-            font-size: 1.2em; /* Slightly larger font for paragraphs */
-            line-height: 1.6; /* Better readability */
-            margin-bottom: 20px;
-        }
-
-        footer p a {
-            color: yellow; /* Make email address stand out */
-            font-weight: bold;
-        }
-
-        /* Added styles for responsive navigation menu */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #004080;
-            padding: 10px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-    color: yellow;
-    text-decoration: none;
-}
-
-        .menu-icon {
-            display: none;
-            font-size: 24px;
-            color: white;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
+        @media (min-width: 768px) {
+            .mobile-tip {
                 display: none;
-                flex-direction: column;
-                background: #004080;
-                position: absolute;
-                top: 50px;
-                right: 10px;
-                width: 200px;
-                padding: 10px;
-                border-radius: 5px;
-            }
-
-            nav ul.show {
-                display: flex;
-            }
-
-            .menu-icon {
-                display: block;
             }
         }
     </style>
@@ -122,39 +28,25 @@
     <header>
         <h1>CryptoAnalysis Reports</h1>
         <nav>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="example.html">Example</a></li>
-                <li><a href="example2.html">Example 2</a></li>
-                <li><a href="example3.html">Example 3</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                
             </ul>
         </nav>
     </header>
 
-    <!-- Banner -->
-    <section class="banner">
-        <h1>Empower Your Crypto Decisions</h1>
-        <p>Professional analysis to stay ahead in the crypto market.</p>
-        <a href="services.html" class="cta-button">Get Started</a>
-    </section>
+    <!-- Mobile Tip -->
+    <div class="mobile-tip">
+        Mobile Tip: Swipe left to right to access the menu.
+    </div>
 
     <!-- Main Content -->
     <main>
-        <section class="home">
+        <section>
             <h2>Welcome to CryptoAnalysis Reports</h2>
-            <p>Your trusted source for actionable cryptocurrency insights and professional market analysis. We provide tailored solutions to help investors and traders succeed in the fast-paced world of crypto.</p>
-
-            <h3>Why Choose Us?</h3>
-            <p>At CryptoAnalysis Reports, we combine advanced technical tools with expert knowledge to deliver comprehensive market insights. Whether you're a beginner or an experienced investor, we have the resources to guide your journey.</p>
-
-            <p>Explore our services and see how we can help you stay ahead in the crypto market. From quick one-time reports to in-depth subscriptions, we have a plan for everyone.</p>
-
-            <a href="services.html" class="cta-button">Explore Our Services</a>
+            <p>Your trusted source for actionable cryptocurrency market insights. Choose a plan and get started today!</p>
         </section>
     </main>
 
@@ -162,13 +54,5 @@
     <footer>
         <p>© 2025 CryptoAnalysis Reports. All Rights Reserved.</p>
     </footer>
-
-    <!-- JavaScript for menu toggle -->
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("menu");
-            menu.classList.toggle("show");
-        }
-    </script>
 </body>
 </html>
