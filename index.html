@@ -19,21 +19,31 @@
             text-align: center;
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
 
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: yellow;
+        .menu-container a {
+            color: #004080;
             text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 10px 0;
+            text-align: center;
+            padding: 10px 20px;
+            border: 1px solid #004080;
+            border-radius: 5px;
+            width: 200px;
+            background-color: white;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .menu-container a:hover {
+            background-color: #004080;
+            color: white;
         }
 
         .mobile-tip {
@@ -44,53 +54,11 @@
             font-size: 14px;
         }
 
-        main {
-            padding: 20px 50px;
-            text-align: center;
-        }
-
         footer {
             text-align: center;
             padding: 10px;
             background-color: #004080;
             color: white;
-        }
-
-        .examples-section {
-            margin-top: 30px;
-        }
-
-        .examples-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .examples-section ul li {
-            margin: 10px 0;
-        }
-
-        .examples-section ul li a {
-            color: #004080;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .examples-section ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .btn-services {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #004080;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-
-        .btn-services:hover {
-            background-color: #003060;
         }
     </style>
 </head>
@@ -98,14 +66,6 @@
     <!-- Header -->
     <header>
         <h1>CryptoAnalysis Reports</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Mobile Tip -->
@@ -113,24 +73,16 @@
         Mobile Tip: Swipe left to right to access the menu on mobile devices.
     </div>
 
-    <!-- Main Content -->
-    <main>
-        <h2>Welcome to CryptoAnalysis Reports</h2>
-        <p>Your trusted source for actionable cryptocurrency market insights. Choose a plan and get started today!</p>
-
-        <!-- Button to Services -->
-        <a href="services.html" class="btn-services">Explore Services</a>
-
-        <!-- Examples Section -->
-        <section class="examples-section">
-            <h3>Examples</h3>
-            <ul>
-                <li><a href="example.html">Example 1: Market Trends</a></li>
-                <li><a href="example2.html">Example 2: Support & Resistance</a></li>
-                <li><a href="example3.html">Example 3: RSI & MACD Analysis</a></li>
-            </ul>
-        </section>
-    </main>
+    <!-- Menu Items in Center Column -->
+    <div class="menu-container">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="example.html">Example 1: Market Trends</a>
+        <a href="example2.html">Example 2: Support & Resistance</a>
+        <a href="example3.html">Example 3: RSI & MACD Analysis</a>
+    </div>
 
     <!-- Footer -->
     <footer>
