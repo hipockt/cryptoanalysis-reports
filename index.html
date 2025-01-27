@@ -17,15 +17,6 @@
             color: white;
             padding: 10px 20px;
             text-align: center;
-            position: relative;
-        }
-
-        .hamburger {
-            position: absolute;
-            right: 20px;
-            top: 15px;
-            cursor: pointer;
-            font-size: 24px;
         }
 
         nav ul {
@@ -33,19 +24,11 @@
             padding: 0;
             margin: 0;
             text-align: center;
-            display: none;
-            position: absolute;
-            background-color: #004080;
-            left: calc(50% - 80px); /* Adjust position to avoid overlap */
-            width: 160px; /* Ensures enough space for the dropdown */
-        }
-
-        nav ul.show {
-            display: block;
         }
 
         nav ul li {
-            margin: 10px 0;
+            display: inline;
+            margin: 0 15px;
         }
 
         nav ul li a {
@@ -63,24 +46,7 @@
 
         main {
             padding: 20px 50px;
-        }
-
-        .center-text {
             text-align: center;
-        }
-
-        .services-button {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .services-button a {
-            text-decoration: none;
-            background-color: #004080;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
         }
 
         footer {
@@ -89,16 +55,52 @@
             background-color: #004080;
             color: white;
         }
+
+        .examples-section {
+            margin-top: 30px;
+        }
+
+        .examples-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .examples-section ul li {
+            margin: 10px 0;
+        }
+
+        .examples-section ul li a {
+            color: #004080;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .examples-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-services {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #004080;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .btn-services:hover {
+            background-color: #003060;
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <h1>CryptoAnalysis Reports</h1>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -113,26 +115,26 @@
 
     <!-- Main Content -->
     <main>
-        <section class="center-text">
-            <h2>Welcome to CryptoAnalysis Reports</h2>
-            <p>Your trusted source for actionable cryptocurrency market insights. Choose a plan and get started today!</p>
-        </section>
+        <h2>Welcome to CryptoAnalysis Reports</h2>
+        <p>Your trusted source for actionable cryptocurrency market insights. Choose a plan and get started today!</p>
 
-        <div class="services-button">
-            <a href="services.html">Explore Our Services</a>
-        </div>
+        <!-- Button to Services -->
+        <a href="services.html" class="btn-services">Explore Services</a>
+
+        <!-- Examples Section -->
+        <section class="examples-section">
+            <h3>Examples</h3>
+            <ul>
+                <li><a href="example.html">Example 1: Market Trends</a></li>
+                <li><a href="example2.html">Example 2: Support & Resistance</a></li>
+                <li><a href="example3.html">Example 3: RSI & MACD Analysis</a></li>
+            </ul>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>© 2025 CryptoAnalysis Reports. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            const nav = document.querySelector('nav ul');
-            nav.classList.toggle('show');
-        }
-    </script>
 </body>
 </html>
