@@ -4,53 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CryptoAnalysis Reports</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
 
         header {
             background-color: #004080;
             color: white;
             padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            text-align: center;
+            position: relative;
         }
 
         .hamburger {
-            display: block;
+            position: absolute;
+            right: 20px;
+            top: 15px;
             cursor: pointer;
+            font-size: 24px;
         }
 
-        .hamburger div {
-            background-color: white;
-            height: 3px;
-            width: 25px;
-            margin: 4px 0;
-        }
-
-        nav {
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
             display: none;
-            flex-direction: column;
-            background-color: #004080;
         }
 
-        nav.active {
-            display: flex;
+        nav ul.show {
+            display: block;
         }
 
-        nav a {
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        nav ul li a {
             color: yellow;
             text-decoration: none;
-            padding: 10px;
+        }
+
+        .mobile-tip {
+            background-color: #f9f9f9;
+            color: #333;
             text-align: center;
+            padding: 10px;
+            font-size: 14px;
         }
 
         main {
-            padding: 20px;
+            padding: 20px 50px;
+        }
+
+        .services-button {
             text-align: center;
+            margin: 20px 0;
+        }
+
+        .services-button a {
+            text-decoration: none;
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
         }
 
         footer {
@@ -59,54 +81,49 @@
             background-color: #004080;
             color: white;
         }
-
-        @media (min-width: 768px) {
-            .hamburger {
-                display: none;
-            }
-
-            nav {
-                display: flex;
-                flex-direction: row;
-            }
-
-            nav a {
-                padding: 0 15px;
-            }
-        }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>CryptoAnalysis Reports</h1>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
+    <!-- Mobile Tip -->
+    <div class="mobile-tip">
+        Mobile Tip: Swipe left to right to access the menu on mobile devices.
+    </div>
+
+    <!-- Main Content -->
     <main>
         <section>
             <h2>Welcome to CryptoAnalysis Reports</h2>
             <p>Your trusted source for actionable cryptocurrency market insights. Choose a plan and get started today!</p>
         </section>
+
+        <div class="services-button">
+            <a href="services.html">Explore Our Services</a>
+        </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>© 2025 CryptoAnalysis Reports. All Rights Reserved.</p>
     </footer>
 
     <script>
         function toggleMenu() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('active');
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
         }
     </script>
 </body>
