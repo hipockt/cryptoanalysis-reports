@@ -4,25 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example 3: Ichimoku Cloud Analysis</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .home-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 15px;
+            background-color: #004080;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: white;
+            color: #004080;
+        }
+
+        main {
+            padding: 20px 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        section h3 {
+            font-size: 1.8em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        section ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        section ul li {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        figure {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        figure figcaption {
+            font-size: 0.9em;
+            color: gray;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #004080;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Example 3: Ichimoku Cloud Analysis</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="example.html">Example 1</a></li>
-                <li><a href="example2.html">Example 2</a></li>
-                <li><a href="example3.html">Example 3</a></li>
-            </ul>
-        </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
+        <a href="index.html" class="home-button">Back to Home</a>
         <section>
             <h2>Ichimoku Cloud Analysis</h2>
             <p>The Ichimoku Cloud is a comprehensive technical analysis tool that provides insight into market trends, support/resistance levels, and momentum.</p>
@@ -30,7 +116,7 @@
 
             <h3>Chart:</h3>
             <figure>
-                <img src="assets/images/ichimoku_cloud.png" alt="Ichimoku Cloud Chart" style="max-width: 100%; height: auto;">
+                <img src="assets/images/ichimoku_cloud.png" alt="Ichimoku Cloud Chart">
                 <figcaption>Figure 1: Ichimoku Cloud Analysis of BTC price trends.</figcaption>
             </figure>
 
@@ -45,6 +131,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>© 2025 CryptoAnalysis Reports. All Rights Reserved.</p>
     </footer>
