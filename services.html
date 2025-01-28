@@ -20,8 +20,8 @@
         }
 
         nav {
-            overflow-x: auto; /* Enable horizontal scrolling if needed */
-            white-space: nowrap; /* Prevent wrapping of menu items */
+            background-color: #004080;
+            padding: 10px 0;
         }
 
         nav ul {
@@ -29,13 +29,12 @@
             padding: 0;
             margin: 0;
             display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
             justify-content: center;
-            align-items: center;
         }
 
         nav ul li {
-            display: inline-block;
-            margin: 0 10px;
+            margin: 5px 10px; /* Add spacing between items */
         }
 
         nav ul li a {
@@ -118,11 +117,18 @@
 
         @media (max-width: 768px) {
             nav ul {
-                flex-wrap: nowrap; /* Prevent wrapping */
+                flex-direction: column; /* Stack menu items vertically */
+                align-items: center;
             }
 
-            nav {
-                overflow-x: auto; /* Horizontal scrolling for smaller screens */
+            nav ul li {
+                width: 100%; /* Full width for each item */
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%; /* Stretch links to full width */
             }
         }
     </style>
@@ -170,9 +176,10 @@
                 <li>Tailored observations aligned to market context.</li>
             </ul>
             <p><strong>Price:</strong> $150 per month</p>
+            <p><strong>Important:</strong> The Basic Plan is billed on a month-to-month basis, with no long-term commitment required.</p>
             <p><strong>Payment Instructions:</strong> To purchase the Basic Plan, please <a href="contact.html?service=Basic Plan" target="_blank">fill out our contact form</a>.</p>
 
-            <!-- Ethereum Payment Section -->
+            <!-- Crypto Payments Section -->
             <div class="crypto-payment">
                 <h3>Pay with Ethereum (ETH)</h3>
                 <p>To pay with Ethereum, scan the QR code or send your payment to the wallet address below:</p>
@@ -186,7 +193,6 @@
                 </ul>
             </div>
 
-            <!-- Bitcoin Payment Section -->
             <div class="crypto-payment">
                 <h3>Pay with Bitcoin (BTC)</h3>
                 <p>To pay with Bitcoin, scan the QR code or send your payment to the wallet address below:</p>
@@ -199,44 +205,6 @@
                     <li>The service you purchased.</li>
                 </ul>
             </div>
-
-            <h2>Compare Our Plans</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Express Report</th>
-                        <th>Basic Plan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Support & Resistance</td>
-                        <td>Static levels for 1 snapshot</td>
-                        <td>Static levels for each report</td>
-                    </tr>
-                    <tr>
-                        <td>Chart</td>
-                        <td>Trend chart with price, volume, RSI, and MACD</td>
-                        <td>Trend chart & Fibonacci retracement chart</td>
-                    </tr>
-                    <tr>
-                        <td>Observations</td>
-                        <td>Concise market observations</td>
-                        <td>Detailed insights tailored to the timeframe</td>
-                    </tr>
-                    <tr>
-                        <td>Turnaround Time</td>
-                        <td>24 hours</td>
-                        <td>Two reports per week</td>
-                    </tr>
-                    <tr>
-                        <td>Price</td>
-                        <td>$35 per report</td>
-                        <td>$150 per month</td>
-                    </tr>
-                </tbody>
-            </table>
         </section>
     </main>
 
