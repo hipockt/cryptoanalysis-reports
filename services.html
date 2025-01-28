@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoAnalysis Reports</title>
+    <title>Services - CryptoAnalysis Reports</title>
     <style>
         body, html {
             margin: 0;
@@ -57,10 +57,20 @@
             color: #004080;
         }
 
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #003060;
+        }
+
         main {
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 40px;
         }
 
         .crypto-payment {
@@ -81,6 +91,8 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            background-color: white;
+            color: black;
         }
 
         table th, table td {
@@ -92,12 +104,6 @@
         table th {
             background-color: #004080;
             color: white;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #003060;
         }
 
         /* Tooltip */
@@ -116,6 +122,12 @@
             opacity: 0.9;
         }
 
+        @media (min-width: 769px) {
+            .tooltip {
+                display: none;
+            }
+        }
+
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column; /* Stack menu items vertically */
@@ -131,30 +143,26 @@
                 width: 100%;
             }
         }
-
-        @media (min-width: 769px) {
-            .tooltip {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>CryptoAnalysis Reports</h1>
+        <h1>Our Services</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="example.html">Example 1</a></li>
+                <li><a href="example2.html">Example 2</a></li>
+                <li><a href="example3.html">Example 3</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="example.html">Example 1</a></li>
-            <li><a href="example2.html">Example 2</a></li>
-            <li><a href="example3.html">Example 3</a></li>
-        </ul>
-    </nav>
+    <!-- Tooltip -->
+    <div class="tooltip">Swipe left to right for menu</div>
 
     <main>
         <section>
@@ -163,20 +171,66 @@
 
             <h3>Express Report</h3>
             <p><strong>Ideal for quick insights:</strong> Designed for traders who need a snapshot of current market conditions within 24 hours.</p>
+            <ul>
+                <li>Key support and resistance levels.</li>
+                <li>Trend chart with price, volume, RSI, and MACD.</li>
+                <li>Concise observations to highlight market sentiment.</li>
+            </ul>
+            <p><strong>Price:</strong> $35 per report (Introductory Offer)</p>
 
-            <!-- Crypto Payments -->
-            <div class="crypto-payment">
-                <h3>Pay with Ethereum (ETH)</h3>
-                <p><strong>Wallet Address:</strong> 0xCC4b1D53BFBCf03Df31f4d74f631A845172aB275</p>
-                <img src="assets/images/ethereum-qr-code.png" alt="Ethereum QR Code">
-            </div>
+            <h3>Basic Plan</h3>
+            <p><strong>Perfect for ongoing insights:</strong> Includes two reports per week with detailed analysis and tailored observations.</p>
+            <ul>
+                <li>Everything in the Express Report, plus:</li>
+                <li>Fibonacci chart with detailed retracement level analysis.</li>
+                <li>In-depth analysis of RSI, MACD, and volume trends.</li>
+            </ul>
+            <p><strong>Price:</strong> $150 per month</p>
 
-            <div class="crypto-payment">
-                <h3>Pay with Bitcoin (BTC)</h3>
-                <p><strong>Wallet Address:</strong> 1MbQkboZj8M3g8TvHH56x22nYFjT6oDAuz</p>
-                <img src="assets/images/bitcoin-qr-code.png" alt="Bitcoin QR Code">
-            </div>
+            <h2>Compare Our Plans</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Express Report</th>
+                        <th>Basic Plan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Support & Resistance</td>
+                        <td>Static levels for 1 snapshot</td>
+                        <td>Updated levels for each report</td>
+                    </tr>
+                    <tr>
+                        <td>Chart</td>
+                        <td>Trend chart with RSI & MACD</td>
+                        <td>Trend chart & Fibonacci retracement</td>
+                    </tr>
+                    <tr>
+                        <td>Turnaround Time</td>
+                        <td>24 hours</td>
+                        <td>Weekly</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
+
+        <!-- Ethereum Payment Section -->
+        <div class="crypto-payment">
+            <h3>Pay with Ethereum (ETH)</h3>
+            <p>To pay with Ethereum, scan the QR code or send your payment to the wallet address below:</p>
+            <p><strong>Wallet Address:</strong> 0xCC4b1D53BFBCf03Df31f4d74f631A845172aB275</p>
+            <img src="assets/images/ethereum-qr-code.png" alt="Ethereum QR Code">
+        </div>
+
+        <!-- Bitcoin Payment Section -->
+        <div class="crypto-payment">
+            <h3>Pay with Bitcoin (BTC)</h3>
+            <p>To pay with Bitcoin, scan the QR code or send your payment to the wallet address below:</p>
+            <p><strong>Wallet Address:</strong> 1MbQkboZj8M3g8TvHH56x22nYFjT6oDAuz</p>
+            <img src="assets/images/bitcoin-qr-code.png" alt="Bitcoin QR Code">
+        </div>
     </main>
 
     <footer>
