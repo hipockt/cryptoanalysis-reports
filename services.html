@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - CryptoAnalysis Reports</title>
+    <title>CryptoAnalysis Reports</title>
     <style>
-        body {
+        body, html {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            background-color: #004080; /* Consistent background */
+            color: white;
             line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         header {
-            background-color: #004080;
-            color: white;
-            padding: 10px 20px;
             text-align: center;
+            padding: 10px 20px;
+            background-color: #004080;
+        }
+
+        header h1 {
+            margin: 0;
         }
 
         nav {
-            background-color: #004080;
+            background-color: #003060;
             padding: 10px 0;
         }
 
@@ -34,14 +40,14 @@
         }
 
         nav ul li {
-            margin: 5px 10px; /* Add spacing between items */
+            margin: 5px 10px;
         }
 
         nav ul li a {
             color: yellow;
             text-decoration: none;
-            font-weight: bold;
             padding: 10px 15px;
+            font-weight: bold;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
         }
@@ -51,20 +57,24 @@
             color: #004080;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #004080;
-            color: white;
-        }
-
         main {
-            padding: 20px 50px;
-        }
-
-        section {
+            padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        .crypto-payment {
+            margin-top: 30px;
+        }
+
+        .crypto-payment img {
+            width: 200px;
+            margin: 10px 0;
+        }
+
+        .crypto-payment p {
+            word-wrap: break-word; /* Wrap long text */
+            overflow-wrap: break-word;
         }
 
         table {
@@ -84,16 +94,13 @@
             color: white;
         }
 
-        .crypto-payment {
-            margin-top: 30px;
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #003060;
         }
 
-        .crypto-payment img {
-            width: 200px;
-            margin: 10px 0;
-        }
-
-        /* Tooltip for Mobile */
+        /* Tooltip */
         .tooltip {
             position: fixed;
             bottom: 20px;
@@ -109,16 +116,9 @@
             opacity: 0.9;
         }
 
-        @media (min-width: 769px) {
-            .tooltip {
-                display: none;
-            }
-        }
-
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column; /* Stack menu items vertically */
-                align-items: center;
             }
 
             nav ul li {
@@ -128,29 +128,33 @@
 
             nav ul li a {
                 display: block;
-                width: 100%; /* Stretch links to full width */
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .tooltip {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Our Services</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="example.html">Example 1</a></li>
-                <li><a href="example2.html">Example 2</a></li>
-                <li><a href="example3.html">Example 3</a></li>
-            </ul>
-        </nav>
+        <h1>CryptoAnalysis Reports</h1>
     </header>
 
-    <!-- Tooltip -->
-    <div class="tooltip">Swipe left to right for menu</div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="example.html">Example 1</a></li>
+            <li><a href="example2.html">Example 2</a></li>
+            <li><a href="example3.html">Example 3</a></li>
+        </ul>
+    </nav>
 
     <main>
         <section>
@@ -159,51 +163,18 @@
 
             <h3>Express Report</h3>
             <p><strong>Ideal for quick insights:</strong> Designed for traders who need a snapshot of current market conditions within 24 hours.</p>
-            <ul>
-                <li>Key support and resistance levels.</li>
-                <li>Trend chart with price, volume, RSI, and MACD.</li>
-                <li>Concise observations to highlight market sentiment.</li>
-            </ul>
-            <p><strong>Price:</strong> $35 per report (Introductory Offer)</p>
-            <p><strong>Payment Instructions:</strong> To purchase an Express Report, please <a href="contact.html?service=Express Report" target="_blank">fill out our contact form</a>.</p>
 
-            <h3>Basic Plan</h3>
-            <p><strong>Perfect for ongoing insights:</strong> Includes two reports per week with detailed analysis and tailored observations.</p>
-            <ul>
-                <li>Everything in the Express Report, plus:</li>
-                <li>Fibonacci chart with detailed retracement level analysis.</li>
-                <li>In-depth analysis of RSI, MACD, and volume trends.</li>
-                <li>Tailored observations aligned to market context.</li>
-            </ul>
-            <p><strong>Price:</strong> $150 per month</p>
-            <p><strong>Important:</strong> The Basic Plan is billed on a month-to-month basis, with no long-term commitment required.</p>
-            <p><strong>Payment Instructions:</strong> To purchase the Basic Plan, please <a href="contact.html?service=Basic Plan" target="_blank">fill out our contact form</a>.</p>
-
-            <!-- Crypto Payments Section -->
+            <!-- Crypto Payments -->
             <div class="crypto-payment">
                 <h3>Pay with Ethereum (ETH)</h3>
-                <p>To pay with Ethereum, scan the QR code or send your payment to the wallet address below:</p>
                 <p><strong>Wallet Address:</strong> 0xCC4b1D53BFBCf03Df31f4d74f631A845172aB275</p>
                 <img src="assets/images/ethereum-qr-code.png" alt="Ethereum QR Code">
-                <p>After sending your payment, please <a href="contact.html?payment=ethereum" target="_blank">fill out our contact form</a> with the transaction details, including:</p>
-                <ul>
-                    <li>The transaction hash (TXID).</li>
-                    <li>Your name and email address.</li>
-                    <li>The service you purchased.</li>
-                </ul>
             </div>
 
             <div class="crypto-payment">
                 <h3>Pay with Bitcoin (BTC)</h3>
-                <p>To pay with Bitcoin, scan the QR code or send your payment to the wallet address below:</p>
                 <p><strong>Wallet Address:</strong> 1MbQkboZj8M3g8TvHH56x22nYFjT6oDAuz</p>
                 <img src="assets/images/bitcoin-qr-code.png" alt="Bitcoin QR Code">
-                <p>After sending your payment, please <a href="contact.html?payment=bitcoin" target="_blank">fill out our contact form</a> with the transaction details, including:</p>
-                <ul>
-                    <li>The transaction hash (TXID).</li>
-                    <li>Your name and email address.</li>
-                    <li>The service you purchased.</li>
-                </ul>
             </div>
         </section>
     </main>
