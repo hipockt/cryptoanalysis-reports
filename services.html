@@ -4,22 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - CryptoAnalysis Reports</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             line-height: 1.6;
-        }
-
-        main {
-            padding: 20px 50px;
-        }
-
-        section {
-            max-width: 800px;
-            margin: 0 auto;
         }
 
         header {
@@ -29,21 +19,37 @@
             text-align: center;
         }
 
+        nav {
+            overflow-x: auto; /* Enable horizontal scrolling if needed */
+            white-space: nowrap; /* Prevent wrapping of menu items */
+        }
+
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         nav ul li {
-            display: inline;
-            margin: 0 15px;
+            display: inline-block;
+            margin: 0 10px;
         }
 
         nav ul li a {
             color: yellow;
             text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: white;
+            color: #004080;
         }
 
         footer {
@@ -51,6 +57,15 @@
             padding: 10px;
             background: #004080;
             color: white;
+        }
+
+        main {
+            padding: 20px 50px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         table {
@@ -79,7 +94,7 @@
             margin: 10px 0;
         }
 
-        /* Permanent Tooltip for Mobile */
+        /* Tooltip for Mobile */
         .tooltip {
             position: fixed;
             bottom: 20px;
@@ -100,6 +115,16 @@
                 display: none;
             }
         }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-wrap: nowrap; /* Prevent wrapping */
+            }
+
+            nav {
+                overflow-x: auto; /* Horizontal scrolling for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -118,7 +143,7 @@
         </nav>
     </header>
 
-    <!-- Permanent Tooltip -->
+    <!-- Tooltip -->
     <div class="tooltip">Swipe left to right for menu</div>
 
     <main>
@@ -145,7 +170,6 @@
                 <li>Tailored observations aligned to market context.</li>
             </ul>
             <p><strong>Price:</strong> $150 per month</p>
-            <p><strong>Important:</strong> The Basic Plan is billed on a month-to-month basis, with no long-term commitment required.</p>
             <p><strong>Payment Instructions:</strong> To purchase the Basic Plan, please <a href="contact.html?service=Basic Plan" target="_blank">fill out our contact form</a>.</p>
 
             <!-- Ethereum Payment Section -->
