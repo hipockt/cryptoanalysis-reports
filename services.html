@@ -92,23 +92,12 @@
             font-size: 14px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             z-index: 1000;
-            animation: fadeIn 1s ease-out;
             opacity: 0.9;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 0.9;
-            }
-        }
-
-        /* Tooltip for All Screens */
         @media (min-width: 769px) {
             .tooltip {
-                display: none; /* Hidden on larger screens */
+                display: none;
             }
         }
     </style>
@@ -158,6 +147,72 @@
             <p><strong>Price:</strong> $150 per month</p>
             <p><strong>Important:</strong> The Basic Plan is billed on a month-to-month basis, with no long-term commitment required.</p>
             <p><strong>Payment Instructions:</strong> To purchase the Basic Plan, please <a href="contact.html?service=Basic Plan" target="_blank">fill out our contact form</a>.</p>
+
+            <!-- Ethereum Payment Section -->
+            <div class="crypto-payment">
+                <h3>Pay with Ethereum (ETH)</h3>
+                <p>To pay with Ethereum, scan the QR code or send your payment to the wallet address below:</p>
+                <p><strong>Wallet Address:</strong> 0xCC4b1D53BFBCf03Df31f4d74f631A845172aB275</p>
+                <img src="assets/images/ethereum-qr-code.png" alt="Ethereum QR Code">
+                <p>After sending your payment, please <a href="contact.html?payment=ethereum" target="_blank">fill out our contact form</a> with the transaction details, including:</p>
+                <ul>
+                    <li>The transaction hash (TXID).</li>
+                    <li>Your name and email address.</li>
+                    <li>The service you purchased.</li>
+                </ul>
+            </div>
+
+            <!-- Bitcoin Payment Section -->
+            <div class="crypto-payment">
+                <h3>Pay with Bitcoin (BTC)</h3>
+                <p>To pay with Bitcoin, scan the QR code or send your payment to the wallet address below:</p>
+                <p><strong>Wallet Address:</strong> 1MbQkboZj8M3g8TvHH56x22nYFjT6oDAuz</p>
+                <img src="assets/images/bitcoin-qr-code.png" alt="Bitcoin QR Code">
+                <p>After sending your payment, please <a href="contact.html?payment=bitcoin" target="_blank">fill out our contact form</a> with the transaction details, including:</p>
+                <ul>
+                    <li>The transaction hash (TXID).</li>
+                    <li>Your name and email address.</li>
+                    <li>The service you purchased.</li>
+                </ul>
+            </div>
+
+            <h2>Compare Our Plans</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Express Report</th>
+                        <th>Basic Plan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Support & Resistance</td>
+                        <td>Static levels for 1 snapshot</td>
+                        <td>Static levels for each report</td>
+                    </tr>
+                    <tr>
+                        <td>Chart</td>
+                        <td>Trend chart with price, volume, RSI, and MACD</td>
+                        <td>Trend chart & Fibonacci retracement chart</td>
+                    </tr>
+                    <tr>
+                        <td>Observations</td>
+                        <td>Concise market observations</td>
+                        <td>Detailed insights tailored to the timeframe</td>
+                    </tr>
+                    <tr>
+                        <td>Turnaround Time</td>
+                        <td>24 hours</td>
+                        <td>Two reports per week</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td>$35 per report</td>
+                        <td>$150 per month</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
